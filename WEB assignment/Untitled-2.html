@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Hello</title>
+	  <script>
+	  function x()
+		  {
+			  if(document.log.nm.value=="")
+				  {
+					  alert("Name missing")
+				  }
+			  if(document.log.pw.value.length<6)
+				  {
+					  alert("6 character needed")
+				  }
+			  if(document.log.pw.value!=document.log.rpw.value)
+				  {
+					  alert("Passwords are not same")
+				  }
+			  if(isNaN(document.log.ag.value))
+				  {
+					  alert("Age missing")
+				  }
+			  if(document.log.ag.value<20)
+				  {
+					  alert("You are not allowed to log in")
+				  }
+			  if((!document.log.rd[0].checked)&&(!document.log.rd[1].checked))
+				  {
+					  alert("Select gender")
+				  }
+			  if((!document.log.ol.checked)&&(!document.log.al.checked))
+				  {
+					  alert("Select qualifications")
+				  }
+		      if((document.log.c.selectedIndex==0))
+				  {
+					  alert("You didn't select the country")
+				  }
+			  if((!document.log.end.checked))
+				  {
+					  alert("You didn't agree to our terms and conditions")
+				  }
+		  }
+	  </script>
+  </head>
+  <body>
+<h1>HELLO WORLD</h1>
+	  <form name="log">
+	  Name:<input type="text" name="nm" placeholder="name"><br>
+		  Password:<input type="password" name="pw" placeholder="password"><br>
+		  Re-type password:<input type="password" name="rpw" placeholder="retypepassword"><br>
+		  Age:<input type="text" name="ag" placeholder="age"><br>
+		  Gender:
+            <input type="radio" name="rd" value="F">Female
+             <input type="radio" name="rd" value="M">Male
+            <br>
+		  Qualifications:
+            <input type="checkbox" name="ol" value="ol">O/L
+             <input type="checkbox" name="al" value="al">A/L
+            <br>
+		  Country:<select name="c">
+		  <option value="s">Select</option>
+		  <option value="sri">Sri Lanka</option>
+		  <option value="uk">United Kingdom</option>
+		  <option value="sk">South Korea</option>
+		  </select><br>
+		  <input type="checkbox" name="end" value="end">I agree to terms and conditions.<br>
+		  <input type="button" name="button1" value="click" onClick="x()">
+	  </form>
+  </body>
+</html>
